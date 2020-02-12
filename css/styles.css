@@ -1,0 +1,416 @@
+*{
+  box-sizing: border-box;
+}
+body{
+  margin: 0;
+  background-color: white;
+  font-family: 'Noto Sans HK', sans-serif;
+}
+ul {
+  list-style-type: none;
+}
+a{
+ text-decoration: none;
+}
+p{
+  color: gray;
+}
+
+
+/* Style the navigation menu */
+.topnav {
+  overflow: hidden;
+  background-color: white;
+  position: relative;
+}
+
+/* Hide the links inside the navigation menu (except for logo/home) */
+.topnav #myLinks {
+  display: none;
+  border-radius: 10px;
+  border-bottom: 2px solid #ccc;
+  color: black;
+}
+
+/* Style navigation menu links */
+.topnav a {
+  color: #7510F7;
+  padding: 14px 25px 14px 35px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Style the hamburger menu */
+.topnav a.icon {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: white;
+}
+
+/* Add a grey background color on mouse-over */
+#myLinks a:hover {
+  border: none;
+  border-radius: 10px;
+  border-bottom: 2px solid #7510F7;
+  border-color: #7510F7;
+}
+
+/* Style the active link (or home/logo) */
+.active {
+  background-color: white;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 900;
+  font-size: 1.3em;
+}
+.fa-bars{
+  color: #7510F7;
+  vertical-align: middle;
+  transform: scale(1.4)
+}
+
+/* main section!! */
+.header-section{
+  padding-bottom: 20px;
+}
+
+.pb{
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  margin: 40px auto 10px auto;
+}
+
+.main-header{
+  font-size: 1em;
+  color: gray;
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.social{
+  display: flex;
+  margin: 20px auto 60px auto;
+  justify-content: center;
+  width: 80%;
+
+}
+.social svg{
+  height: 30px;
+  margin: 0 10px;
+  fill: #7510f7;
+}
+
+/* main content area */
+.secondary-header{
+  text-align: center;
+  margin: 5px auto 40px auto;
+  color: white;
+}
+.occupations{
+  display: grid;
+  width: 95%;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 80px;
+}
+.occupation{
+  animation-duration: 1.5s;
+}
+
+.eventet-logo{
+  height: 70px;
+}
+.treehouse-logo{
+  height: 50px;
+}
+.gotutor-logo{
+  height: 60px;
+}
+.company-logo{
+  margin: auto auto 10px auto;
+}
+
+/* show more botton */
+.showmore{
+  border: none;
+  border-bottom: 2px solid #7510f7;
+  border-radius: 10px;
+  background: white;
+  font-weight: bold;
+  margin: 0 auto 20px auto;
+  width: 75%;
+  padding: 10px;
+}
+.showmore:hover{
+
+}
+
+.occupations section{
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 10px;
+  border-bottom: 4px solid #ccc;
+  padding: 10px;
+
+}
+.occupations section:hover{
+  border-color: #f461c1;
+}
+.occupations section h3{
+  text-align: center;
+}
+.occupations section p{
+  margin-left: 5px;
+}
+
+/* styling for show more button */
+.moreInfo{
+  display: none;
+}
+.tertiary-header{
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 0;
+}
+
+/* STYLING FOR PAGE SEPERATOR XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+.section-divider{
+  position: relative;
+}
+.section-divider:before {
+  font-family: 'Orbitron', sans-serif;
+  content: "VK";
+  width: 6.5rem;
+  height: 6.5rem;
+  background: #7510f7;
+  border-radius: 100%;
+  position: absolute;
+  top: -3.25rem;
+  left: calc(50% - 3.25rem);
+  color: white;
+  line-height: 6rem;
+  text-indent: 1.5rem;
+  font-size: 2rem;
+}
+
+.occupations-section
+{
+  margin: 0;
+  padding: 0;
+  padding-top: 40px;
+  background-color: #7510f7;
+}
+
+.editorial {
+  display: block;
+  width: 100%;
+  height: 60px;
+  max-height: 60px;
+  margin: 0;
+  z-index:5;
+  bottom:0;
+  left:0px;
+}
+
+.parallax1 > use {
+  animation: move-forever1 10s linear infinite;
+}
+.parallax2 > use {
+  animation: move-forever2 8s linear infinite;
+}
+.parallax3 > use {
+  animation: move-forever3 6s linear infinite;
+}
+.parallax4 > use {
+  animation: move-forever4 4s linear infinite;
+}
+@keyframes move-forever1 {
+  0% {
+    transform: translate(85px, 0%);
+  }
+  100% {
+    transform: translate(-90px, 0%);
+  }
+}
+@keyframes move-forever2 {
+  0% {
+    transform: translate(-90px, 0%);
+  }
+  100% {
+    transform: translate(85px, 0%);
+  }
+}
+@keyframes move-forever3 {
+  0% {
+    transform: translate(85px, 0%);
+  }
+  100% {
+    transform: translate(-90px, 0%);
+  }
+}
+@keyframes move-forever4 {
+  0% {
+    transform: translate(-90px, 0%);
+  }
+  100% {
+    transform: translate(85px, 0%);
+  }
+}
+
+
+/* FOOTER SECTION XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+  footer{
+    margin-top: 100px;
+    background-color: #7510f7;
+  }
+  .footer-content{
+    display: flex;
+    flex-direction: column;
+  }
+.footer-content h2{
+  margin-top: 60px;
+  color: white;
+  text-align: center;
+}
+
+  .social-2{
+    display: flex;
+    margin: 20px auto 60px auto;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+
+  }
+  .social-2 svg{
+    height: 40px;
+    margin: 0 10px;
+    fill: white;
+    margin: 0 10px;
+  }
+
+
+
+
+
+/* breakpoint for medium screens */
+@media (min-width: 321px) {
+
+
+  /* portfolio section (earlier projects) */
+
+
+
+
+
+}
+
+
+
+
+/* breakpoint for larger screens */
+@media (min-width: 768px) {
+  .topnav a.icon{
+    display: none;
+  }
+  .topnav #myLinks{
+    display: flex;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav #myLinks a:first-child{
+    margin-left: auto;
+  }
+  .topnav a{
+    padding: 14px 60px;
+  }
+  .pb{
+    height: 90px;
+    margin-top: 0px;
+  }
+  .main-header{
+    font-size: 1.2em;
+    margin-bottom: 15px;
+  }
+  .social{
+    margin-bottom: 30px;
+  }
+  .social svg{
+    height: 30px;
+    margin: 0 20px;
+  }
+
+  .header-section{
+    padding-bottom: 30px;
+  }
+
+  .occupations{
+    margin-bottom: 30px;
+  }
+
+
+  .project-container h3 {
+    font-size: .9em;
+  }
+  .project-section-1{
+    display: flex;
+    flex-direction: row;
+    max-width: 1000px;
+    margin: 20px auto;
+  }
+  .hover-box{
+    width: 250px;
+    height: 250px;
+  }
+  .project-section-2{
+    display: flex;
+    flex-direction: row;
+    max-width: 1000px;
+    margin: 0 auto 20px auto;
+  }
+
+  .social-2 svg{
+    margin: 0 20px;
+  }
+
+
+}
+
+@media (min-width: 1024px) {
+  .pb{
+    height: 120px;
+  }
+  .social{
+    margin-top: 50px
+  }
+  .social svg{
+    height: 40px;
+  }
+
+  .header-section{
+    padding-bottom: 90px;
+  }
+
+  .occupations{
+    margin-bottom: 80px;
+  }
+
+  .project-container h3{
+    font-size: 1.1em;
+  }
+  .hover-box{
+    width: 300px;
+    height: 300px;
+  }
+
+
+  .modal-content{
+    width: 40%;
+  }
+
+}

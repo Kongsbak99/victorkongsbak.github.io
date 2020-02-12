@@ -1,0 +1,118 @@
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+
+
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  /* padding: 20px; */
+  border: 1px solid #888;
+  width: 90%; /* Could be more or less, depending on screen size */
+  box-shadow:
+  0 4px 10px 0 rgba(0,0,0,0.2),
+  0 4px 20px 0 rgba(0,0,0,0.19);
+  padding-bottom: 10px;
+  border-radius: 10px;
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 18px;
+  font-weight: bold;
+  margin-right: 10px;
+  margin-top: 5px;
+}
+
+.close:hover,
+.close:focus {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header{
+  background-color: #7510F7;
+  margin-top: 0;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.modal-header h2{
+  margin: 0;
+  color: white;
+  font-size: 1em;
+  padding: 20px 5px 5px 5px;
+  text-align: center;
+}
+.modal-header h3{
+  font-size: .8em;
+  color: white;
+  padding: 0 5px 13px 5px;
+  text-align: center;
+}
+
+
+/* list styling for contact options */
+.contact-list {
+  display: flex;
+  width: 270px;
+  margin: 25px auto;
+}
+
+.contact-list ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.contact-list ul li {
+  font: 200 20px/1.5 Helvetica, Verdana, sans-serif;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+}
+
+.contact-list ul li:last-child {
+  border: none;
+}
+
+.contact-list ul li a {
+  text-decoration: none;
+  color: #000;
+
+  -webkit-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -moz-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -o-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -ms-transition: font-size 0.3s ease, background-color 0.3s ease;
+  transition: font-size 0.3s ease, background-color 0.3s ease;
+  display: block;
+  width: 270px;
+  font-size: .7em;
+  padding-top: 12px;
+  padding-bottom: 6px;
+}
+.contact-list ul li a svg{
+  height: 20px;
+  margin: 0 5px;
+  fill: #7510f7;
+  vertical-align: middle;
+}
+
+.contact-list ul li a:hover {
+  font-size: .9em;
+  background: #f6f6f6;
+}

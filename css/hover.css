@@ -1,0 +1,138 @@
+
+
+/* hover box for project 9 */
+.project-container{
+  /* display: flex;
+  flex-wrap: wrap;
+  flex-direction: column; */
+  margin: 10px auto;
+  max-width: 300px;
+}
+.project-container h3{
+  font-size: 1.1em;
+  text-align: center;
+  padding-bottom: 5px;
+  max-width: 80%;
+  margin: 20px auto 10px auto;
+  border-bottom: 2px solid #7510f7;
+}
+
+.hover-box{
+  position:relative;
+  padding:0;
+  width:300px;
+  height: 300px;
+  display:block;
+  cursor:pointer;
+  overflow:hidden;
+  border-radius: 10px;
+  box-shadow: 0 0 10px gray;
+  animation-duration: 3s;
+}
+.content {
+  opacity:0;
+  position:absolute;
+  top:0;
+  left:0;
+  color: white;
+  background-color: #000f2e;
+  width:300px;
+  height:300px;
+  -webkit-transition: all 600ms ease-out;
+  -moz-transition: all 600ms ease-out;
+  -o-transition: all 600ms ease-out;
+  -ms-transition: all 600ms ease-out;
+  transition: all 600ms ease-out;
+  text-align:center;
+
+}
+.hover-box .content:hover {
+  opacity:1;
+}
+.hover-box .content .text {
+  opacity:1;
+  transition-delay: 0s;
+  transition-duration: 1s;
+}
+.hover-box .content:hover .text {
+  opacity:1;
+  transform: translateY(150px);
+  -webkit-transform: translateY(150px);
+}
+.text{
+  display: flex;
+  flex-direction: column;
+}
+.text-hover{
+  font-size: .7em;
+  padding: 8px;
+  color: white;
+  margin-bottom: 0px;
+  margin-top: -130px;
+
+}
+.text h6{
+  font-size: 1em;
+  border-top: 1px dashed white;
+  width: 80%;
+  margin: 0 auto 0 auto;
+  padding-top: 10px;
+}
+
+/* used skills */
+ul.skills {
+  padding: 0;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.skills li {
+  font-size: .8em;
+  border-radius: 7px;
+  border: 1px solid gray;
+  display: inline-block;
+  color: white;
+  padding: 5px 10px;
+  margin: 5px;
+  letter-spacing: 1px;
+}
+.html{
+  background-color: #e44d26;
+  box-shadow: 0 0 10px gray;
+}
+.css{
+  background-color: #2062af;
+  box-shadow: 0 0 10px gray;
+}
+.js{
+  background-color: #e4c52d;
+  box-shadow: 0 0 10px gray;
+}
+.sass{
+  background-color: #2177db;
+  box-shadow: 0 0 10px gray;
+}
+
+.hover-btn{
+  background-color: transparent;
+  font-weight: bold;
+  font-size: .8em;
+  border-color: #7510F7;
+  color: white;
+  margin: auto auto 10px auto;
+  padding: 10px;
+  border-radius: 20px;
+  border-style: solid;
+  cursor: pointer;
+  transition: all 1s ease;
+  width: 140px;
+}
+.hover-btn:hover{
+  background-color: #7510F7;
+  transform: scale(1.1)
+}
+.arrow-right{
+  display: inline-block;
+  margin-left: 5px;
+  vertical-align: middle;
+}
