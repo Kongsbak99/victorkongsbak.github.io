@@ -1,0 +1,41 @@
+*{
+  box-sizing: border-box;
+}
+main{
+  margin: auto;
+  padding: 2em 0;
+  max-width: 1024px;
+}
+
+ul{
+  list-style: none;
+  padding: 0;
+}
+li{
+  padding: 0;
+  display: inline;
+}
+a{
+  border: none;
+  text-decoration: none;
+}
+
+#search{
+  display: block;
+  width: 44%;
+  margin: 0 auto 10px;
+  padding: .5em;
+  border: 1.5px solid lightgray;
+  border-radius: 5px;
+  color: #2F4F4F;
+  outline: none;
+}
+
+.pictures{
+  padding: 0 2.5em 2.5em 2.5em;
+}
+
+.pictures img{
+  margin: 1em;
+  align-items: center;
+}
