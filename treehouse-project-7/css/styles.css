@@ -1,0 +1,603 @@
+*{
+  box-sizing: border-box;
+}
+html{
+  margin: 0;
+  padding: 0;
+}
+body{
+
+  margin: 0 auto 0 auto;
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+h2{
+  font-size: .7em;
+  margin-left: 2px;
+  margin: 10px 10px 10px 10px;
+  font-weight: lighter;
+}
+ul{
+  list-style-type: none;
+  padding-left: 0;
+}
+/* Defining grid areas and fixing grid placement. --------------------------------------------------*/
+.grid{
+  display: grid;
+  grid-template-columns: 50px 1fr 1fr;
+  grid-template-rows: 50px 50px 250px 250px 250px 400px 250px 250px 250px 250px;
+  grid-template-areas:
+  "header header header"
+  "aside dashboard dashboard"
+  "aside chart1 chart1"
+  "aside chart2 chart2"
+  "aside chart3 chart3"
+  "aside social social"
+  "aside feed1 feed1"
+  "aside feed2 feed2"
+  "aside message-user message-user"
+  "aside settings settings";
+}
+
+/* Design for the top header -------------------------------------------------- */
+header{
+  grid-area: header;
+  background-color: #7476C0;
+}
+.user-nav{
+  display: flex;
+  flex-direction: row;
+  max-height: 50px;
+}
+.user-nav h1,
+.user-nav img,
+.user-nav h2,
+#noti-marker{
+  display: flex;
+  flex-direction: row;
+}
+.user-nav h1{
+  font-weight: normal;
+  color: white;
+  margin: auto auto auto 10px;
+  font-size: 1em;
+}
+.user-image{
+  margin: 10px 3px 10px 5px;
+  max-width: 30px;
+  max-height: 30px;
+  border-radius: 50%;
+}
+.notification-bell{
+  width: 2.2em;
+  margin-left: auto;
+  margin: auto 10px auto auto;
+  padding-right: 15px;
+  border-right-style: solid;
+  border-width: 1px;
+  border-color: black;
+}
+
+#noti-marker{
+    display: block;
+    position: absolute;
+    background: lightgreen;
+    padding: 3px 3px;
+    margin: -8px 0 0 14px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.st0{
+  transition: fill .4s ease;
+}
+#Layer_1 .st0:hover{
+  fill: lightgreen;
+
+}
+
+.user-nav h2{
+  color: white;
+  margin: auto 10px auto 5px;
+  font-size: 0.8em;
+}
+
+/* side navigation bar -------------------------------------------------- */
+aside{
+  grid-area: aside;
+  background-color: #6c4c8f;
+}
+.main-nav{
+  display: flex;
+  flex-direction: column;
+}
+.main-nav a img{
+  max-width: 20px;
+}
+.main-nav a{
+  /* margin: 0; */
+  padding: 10px 15px 10px 15px;
+  border-left: 3px solid #6c4c8f;
+  opacity: 0.6;
+}
+#dashboard{
+  border-left: 3px solid #30f063;
+  opacity: 1;
+}
+
+
+/* Header for the main content including a SEARCH BAR --------------------------------------------------*/
+.dashboard{
+  grid-area: dashboard;
+}
+.search{
+  display: flex;
+  flex-direction: row;
+  background-color: #ededed;
+}
+.search h1{
+  font-size: 1em;
+  padding: 14px 10px 14px 10px;
+  margin: 0 auto 0 0;
+  background-color: white;
+}
+.search input{
+  display: flex;
+  flex-direction: row;
+  margin-left: auto;
+  margin: auto 10px auto;
+  border-radius: 5px;
+  border: 1px solid lightgray;
+  padding: 5px 0 5px 5px;
+  max-width: 40%;
+}
+
+
+/* chart 1 and alert --------------------------------------------------*/
+.chart1{
+  grid-area: chart1;
+  background-color: white;
+}
+
+/* The alert message box */
+.alert {
+  padding: 5px;
+  background-color: #7476C0; /* Red */
+  color: white;
+  margin: 0 auto 0 auto;
+  font-size: .7em;
+  width: 95%;
+  border-radius: 5px;
+
+}
+/* The close button */
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+/* When moving the mouse over the close button */
+.closebtn:hover {
+  color: black;
+}
+
+/* Legend and navigation bottons for the chart */
+.chart1-header{
+  display: flex;
+  flex-direction: row;
+  margin-right: 0;
+}
+
+.chart-nav{
+  display: flex;
+  list-style-type: none;
+  margin-left: auto;
+}
+.chart-nav li{
+  margin-right: 10px;
+  font-size: 0.6em;
+  text-decoration-color: black;
+  letter-spacing: .5px;
+  font-weight: bold;
+  font-weight: lighter;
+}
+.chosen{
+  border-radius: 15px;
+  background: #82C98F;
+  padding: 2px 5px 2px 5px;
+  color: white;
+}
+
+/* Styling the chart */
+
+/* .lineChart{
+  display: block;
+  margin: 5px auto 10px auto;
+  max-width: 250px;
+  max-height: 100px;
+} */
+
+
+
+
+/* designs for the second chart -------------------------------------------------- */
+.chart2{
+  grid-area: chart2;
+  border-bottom: 1px solid lightgray;
+  border-top: 1px solid lightgray;
+  border-right: 1px solid lightgray;
+}
+.chart2 h2{
+  font-size: .7em;
+  font-weight: lighter;
+}
+
+
+
+/* designs for the third chart -------------------------------------------------- */
+.chart3{
+  grid-area: chart3;
+  border-bottom: 1px solid lightgray;
+  border-top: 1px solid lightgray;
+}
+.chart3 h2{
+  font-size: .7em;
+  font-weight: lighter;
+}
+
+
+/* Social media stripe twitter, facebook, google  --------------------------------------------------*/
+.social{
+  grid-area: social;
+  border-bottom: 1px solid lightgray;
+  border-top: 1px solid lightgray;
+}
+.social-container {
+    border: 1px solid darkgrey;
+    padding: 15px;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    width: 220px;
+    max-height: 90px;
+    margin: 5px 0 20px 15px;
+    border-radius: 5px;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top:  15px;
+    left: 15px;
+    fill: white;
+}
+
+#twitter .social-icon {
+    top: 20px;
+}
+
+.circle {
+    background-color: #7277be;
+    border-radius: 100%;
+    width: 70px;
+    height: 70px;
+    position: relative;
+    z-index: 1;
+}
+
+.social-name {
+    color: #7277be;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.social-counter {
+    color: darkgrey;
+    font-size: 2.2em;
+    font-weight: lighter;
+}
+
+.social-group {
+    margin-left: 10px;
+}
+.flex-social-container{
+  display: block;
+}
+
+
+
+/* Social feed 1 --------------------------------------------------*/
+.feed1{
+  grid-area: feed1;
+  border-right: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+  overflow: hidden;
+}
+
+.member{
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  width: 100%;
+  margin-left: 5px;
+}
+.member-pb{
+  width: 35px;
+  height: 35px;
+  border-radius: 100%;
+}
+.member-info{
+  display: flex;
+  flex-direction: column;
+  padding-left: 8px;
+}
+.member-name{
+  color: darkgrey;
+  font-size: .9em;
+  max-width: 130px;
+}
+.member-email{
+  font-size: .75em;
+  color: #7277be;
+}
+.date{
+  color: darkgrey;
+  font-size: .8em;
+  display: flex;
+  flex-direction: row;
+  margin-left: auto;
+  margin-right: 8px;
+}
+
+
+
+/* Social feed 2 --------------------------------------------------*/
+.feed2{
+  grid-area: feed2;
+  border-bottom: 1px solid lightgray;
+}
+.member{
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  width: 100%;
+  margin-left: 5px;
+}
+.member-pb{
+  width: 35px;
+  height: 35px;
+  border-radius: 100%;
+}
+.member-info{
+  display: flex;
+  flex-direction: column;
+  padding-left: 8px;
+}
+.member-update{
+  color: darkgrey;
+  font-size: .7em;
+  max-width: 300px;
+}
+.member-hours-ago{
+  font-size: .6em;
+  color: darkgrey;
+  font-weight: bold;
+}
+.arrow{
+  margin: 5px 15px 0 auto;
+  width: 10px;
+  height: 10px;
+}
+#last-child{
+  border-bottom-style: none;
+}
+
+
+/* MESSAGE USER SECTION */
+.message-user{
+  grid-area: message-user;
+  border-right: 1px solid lightgray;
+}
+.message-form{
+  display: flex;
+  flex-direction: column;
+}
+.search-user{
+  width: 95%;
+  margin: 0 auto 10px auto;
+  border-radius: 5px;
+  border: 2px solid lightgray;
+  padding: 10px 10px 10px 10px;
+}
+.message-input{
+  width: 95%;
+  margin: 0 auto 0 auto;
+  border-radius: 5px;
+  border: 2px solid lightgray;
+  padding: 10px 10px 80px 10px;
+}
+.submit{
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: white;
+  background-color: #7277be;
+  border: none;
+  border-radius: 5px;
+  width: 95%;
+  margin: 0 auto 20px auto;
+  font-size: .7em;
+}
+
+
+
+/* SETTINGS SECTION OF THE PAGE */
+.settings{
+  grid-area: settings;
+}
+
+/* ON/OFF switch */
+.onoffswitch {
+    position: relative; width: 80px;
+    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+    margin-left: 30px;
+
+}
+.onoffswitch-checkbox {
+    display: none;
+}
+.onoffswitch-label {
+    display: block; overflow: hidden; cursor: pointer;
+    border: 2px solid #999999; border-radius: 20px;
+}
+.onoffswitch-inner {
+    display: block; width: 200%; margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+}
+.onoffswitch-inner:before, .onoffswitch-inner:after {
+    display: block; float: left; width: 50%; height: 30px; padding: 0; line-height: 30px;
+    font-size: 14px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+    box-sizing: border-box;
+}
+.onoffswitch-inner:before {
+    content: "ON";
+    padding-left: 10px;
+    background-color: #7476C0; color: #FFFFFF;
+}
+.onoffswitch-inner:after {
+    content: "OFF";
+    padding-right: 10px;
+    background-color: #EEEEEE; color: #999999;
+    text-align: right;
+}
+.onoffswitch-switch {
+    display: block; width: 22px; margin: 6px;
+    background: #FFFFFF;
+    position: absolute; top: 0; bottom: 0;
+    right: 46px;
+    border: 2px solid #999999; border-radius: 20px;
+    transition: all 0.3s ease-in 0s;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+    margin-left: 0;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+    right: 0px;
+}
+
+.settings-row{
+  display: flex;
+  flex-direction: row;
+  align: center;
+  margin-left: 10px;
+  margin-bottom: 25px;
+}
+.settings-text{
+  margin-top: 7px;
+  font-size: .8em;
+  width: 140px;
+}
+/* select Timezone */
+.timezone{
+  display: flex;
+  width: 95%;
+  margin: 10px auto 19px auto;
+  padding: 10px 10px 10px 10px;
+  border-radius: 5px;
+}
+.settings-b{
+  display: flex;
+}
+.save{
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: white;
+  background-color: #7277be;
+  border: none;
+  border-radius: 5px;
+  width: 40%;
+  margin: 0 auto 20px auto;
+  font-size: .7em;
+  margin: 0 auto 0 auto;
+}
+.cancel{
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: white;
+  background-color: gray;
+  border: none;
+  border-radius: 5px;
+  width: 40%;
+  margin: 0 auto 20px auto;
+  font-size: .7em;
+  margin: 0 auto 0 auto;
+}
+.lineChart{
+  max-height: 190px;
+}
+
+@media screen and (min-width: 550px) {
+  .grid{
+    display: grid;
+    grid-template-columns: 50px 1fr 1fr;
+    grid-template-rows: 50px 50px 275px 250px 150px 250px 250px;
+    grid-template-areas:
+    "header header header"
+    "aside dashboard dashboard"
+    "aside chart1 chart1"
+    "aside chart2 chart3"
+    "aside social social"
+    "aside feed1 feed2"
+    "aside message-user settings";
+  }
+  .flex-social-container{
+    display: flex;
+  }
+  .social-container{
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+
+@media screen and (min-width: 768px) {
+  .grid{
+    display: grid;
+    grid-template-columns: 50px 1fr 1fr;
+    grid-template-rows: 50px 50px 275px 250px 150px 250px 250px;
+    grid-template-areas:
+    "header header header"
+    "aside dashboard dashboard"
+    "aside chart1 chart1"
+    "aside chart2 chart3"
+    "aside social social"
+    "aside feed1 feed2"
+    "aside message-user settings";
+  }
+
+  .lineChart{
+    width: 90%;
+    height:75%;
+    margin: 0 auto 20px auto;
+  }
+
+  .donutchart{
+    max-height: 450px;
+    max-width: ;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .search input{
+    width: 300px;
+  }
+
+}
