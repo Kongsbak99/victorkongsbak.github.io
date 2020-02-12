@@ -382,6 +382,9 @@ p{
 }
 
 @media (min-width: 1024px) {
+  .nav-bar{
+    margin-right: 36px;
+  }
   .pb{
     height: 120px;
   }
