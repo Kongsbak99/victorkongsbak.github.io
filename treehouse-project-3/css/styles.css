@@ -1,0 +1,237 @@
+*{
+  box-sizing: border-box;
+}
+body{
+  margin: 0;
+}
+form{
+  padding: 20px 0 20px 0;
+  margin: 0 auto 0 auto;
+  max-width: 90%;
+}
+fieldset{
+  border-style: none;
+  margin: 0;
+  padding: 0;
+}
+label{
+  padding: 0 0 10px 3px;
+  margin-bottom: 10px;
+}
+legend{
+  margin-bottom: 20px;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #2D3945;
+}
+ul,
+li{
+  margin-bottom: 10px;
+  padding: 0;
+  text-indent: 0;
+  list-style-type: none;
+}
+
+.main-header{
+  font-family: 'Merriweather';
+  font-size: 1.3em;
+  text-align: center;
+  color: white;
+  background: #2D3945;
+  padding: 30px;
+  width: 100%;
+  margin: 0;
+}
+
+.intro{
+  text-align: center;
+  border-bottom-style: solid;
+  border-width: 5px;
+  margin-bottom: 4px;
+  border-color: #2D3945;
+  max-width: 90%;
+  margin: 10px auto 4px auto;
+}
+
+.secondary-header{
+  color: #2D3945;
+  margin: 30px 0 0;
+}
+
+.intro-p{
+  color: gray;
+  margin-top: 8px;
+  margin-bottom: 40px;
+}
+
+.form{
+  border-top-style: solid;
+  border-color: #2D3945;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea,
+select {
+  border: none;
+  font-size: 16px;
+  height: auto;
+  margin: 0;
+  outline: 0;
+  padding: 15px;
+  width: 100%;
+  background-color: #EFF0F1;
+  color: #8a97a0;
+  margin-bottom: 30px;
+  margin-top: 10px;
+  border-radius: 7px;
+}
+
+input[type="email"],
+#name{
+  text-align: right;
+  padding-right: 23px;
+  font-style: italic;
+}
+input:focus[type="email"],
+#name:focus{
+  text-align: left;
+}
+
+input:focus{
+  border-style: solid;
+  border-color: #2D3945;
+}
+
+#zip{
+  max-width: 50%;
+}
+
+.second-fieldset{
+  border-top-style: solid;
+  border-color: #2D3945;
+  border-width: 3px;
+  padding-top: 30px;
+  position: relative;
+}
+
+.newsletter{
+  position: absolute;
+  margin-top: 20px;
+}
+
+fieldset p{
+  font-size: 1.1em;
+  margin-left: 5px;
+  margin-right: 5px;
+  font-weight: lighter;
+}
+
+fieldset input[type="radio"], input[type="checkbox"]{
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+#format_plain{
+  margin-bottom: 20px;
+}
+
+button{
+  width: 100%;
+  padding: 20px 0 20px 0;
+  font-size: 1.6em;
+  background-color: #4EBBB5;
+  border-width: 0;
+  border-radius: 7px;
+  color: White;
+  font-family: Merriweather;
+}
+
+
+
+footer{
+  margin-left: auto;
+  margin-right: auto;
+  border-width: 0;
+}
+
+footer p{
+  font-style: italic;
+  text-align: center;
+  color: gray;
+}
+
+
+@media (min-width: 768px){
+
+.main-header{
+  padding: 20px 30px 20px 30px;
+  font-size: .9em;
+}
+
+.intro{
+  margin-top: 60px;
+}
+
+form, .second-fieldset{
+  padding-top: 50px;
+}
+.newsletter{
+  margin-top: 40px;
+}
+
+form, .intro{
+  max-width: 500px;
+}
+
+legend{
+}
+
+label {
+  display: flex;
+  width: 150px;
+  align-items: center;
+  margin-right: auto;
+}
+
+input, select{
+  max-width: 300px;
+  align-items: center;
+
+}
+
+form div, form li{
+  display: flex;
+}
+
+li label{
+  margin-left: 10px;
+}
+
+li{
+  margin: 0;
+}
+
+textarea{
+  max-height: 100px
+}
+
+button{
+  font-size: 1.1em;
+  padding: 15px 0;
+}
+
+#zip{
+  max-width: 30%;
+  margin-right: 150px;
+}
+
+.other-topics{
+  max-width: 100%;
+  margin: 0;
+  display: inline;
+  font-size: 1.1em;
+}
+
+}
