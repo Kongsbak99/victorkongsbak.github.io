@@ -91,7 +91,7 @@ p{
 
 .social{
   display: flex;
-  margin: 20px auto 60px auto;
+  margin: 10px auto 60px auto;
   justify-content: center;
   width: 80%;
 
@@ -369,7 +369,7 @@ p{
     margin-bottom: 15px;
   }
   .social{
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
   .social svg{
     height: 30px;
@@ -420,14 +420,14 @@ p{
     height: 120px;
   }
   .social{
-    margin-top: 50px
+    margin-top: 20px
   }
   .social svg{
     height: 40px;
   }
 
   .header-section{
-    padding-bottom: 90px;
+    padding-bottom: 60px;
   }
 
   .occupations{
