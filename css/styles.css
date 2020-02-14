@@ -263,6 +263,37 @@ p{
 }
 
 
+/* styling for project botton on small screens */
+.hover-info-sm{
+  display: flex;
+  flex-direction: column;
+}
+
+.hover-btn-2{
+  background-color: transparent;
+  font-weight: bold;
+  font-size: .8em;
+  border-color: #03396c;
+  color: #03396c;
+  margin: 10px auto 10px auto;
+  padding: 10px;
+  border-radius: 20px;
+  border-style: solid;
+  cursor: pointer;
+  transition: all 1s ease;
+  width: 140px;
+}
+.arrow-right-2{
+  display: inline-block;
+  height: 15px;
+  margin-left: 15px;
+  vertical-align: middle;
+  transform: rotate(90deg);
+}
+
+
+
+
 /* FOOTER SECTION XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
   footer{
     margin-top: 100px;
@@ -416,4 +447,12 @@ p{
     width: 40%;
   }
 
+}
+
+
+
+@media (min-width: 1025px){
+  .hover-info-sm{
+    display: none;
+  }
 }
